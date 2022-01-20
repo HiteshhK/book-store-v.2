@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>{{ title }}</h2>
+  <pre>{{ description }}</pre>
+  <app-add-book [book]="selectedBook" (onSave)="saveBook($event)"></app-add-book>
+  <app-view-book [books]="books" (action)="bookAction($event)"></app-view-book>
+</div>

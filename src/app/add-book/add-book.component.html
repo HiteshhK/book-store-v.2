@@ -1,0 +1,65 @@
+<form class="col-12">
+  <div class="mb-3">
+    <label for="Idformcontrol" class="form-label">Book Id</label>
+    <input
+      type="number"
+      [(ngModel)]="book.id"
+      class="form-control"
+      name="book-Id"
+      placeholder="Book Id"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="nameformcontrol" class="form-label">Book Name</label>
+    <input
+      type="text"
+      [(ngModel)]="book.name"
+      class="form-control"
+      name="book-name"
+      placeholder="book Name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="Genreformcontrol" class="form-label">Genre</label>
+    <input
+      type="string"
+      [(ngModel)]="book.genre"
+      class="form-control"
+      name="genre"
+      placeholder="Genre"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="Quantityformcontrol" class="form-label">Book Quantity</label>
+    <input
+      type="number"
+      [(ngModel)]="book.quantity"
+      class="form-control"
+      name="Quantity"
+      placeholder="Quantity"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="Costformcontrol" class="form-label">Cost</label>
+    <input
+      type="text"
+      [(ngModel)]="book.cost"
+      class="form-control"
+      name="Cost"
+      placeholder="Book Cost"
+    />
+  </div>
+  <div class="d-flex justify-content-end">
+    <button
+      type="button"
+      class="btn btn-primary mb-3"
+      [disabled]="isFormInValid()"
+      (click)="saveDetails()"
+    >
+      Save
+    </button>
+  </div>
+</form>
